@@ -1,6 +1,8 @@
 /* code css à faire */
 
-/* menu */
+/* --- menu (popover plein écran) ------------------------------------------ */
+/* La feuille du navigateur a déjà fixé le panneau à l'écran
+   (position: fixed; inset: 0) : on l'étire, sans positionner. */
 .menu {
   width: 100%;
   height: 100%;
@@ -19,14 +21,19 @@
   }
 }
 
+/* Page figée tant que le menu est ouvert.
+   :has() — extrait fourni : seul moyen, en CSS, de faire remonter l'état
+   du menu jusqu'à la page. */
 html:has(.menu[popover]:popover-open) {
   overflow: hidden;
 }
 
+/* --- burger ---------------------------- */
 .burger {
     cursor: pointer;
 }
 
+/* À l'ouverture, même position « hamburger » */
 @starting-style {
   .menu:popover-open .burger--close {
     transform: none;
