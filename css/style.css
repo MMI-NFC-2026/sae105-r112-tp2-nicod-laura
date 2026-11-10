@@ -9,3 +9,7 @@
 html:has(.menu[popover]:popover-open) {
   overflow: hidden;
 }
+
+.burger {
+    cursor: pointer;
+}
