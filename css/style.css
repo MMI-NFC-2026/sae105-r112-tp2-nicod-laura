@@ -5,3 +5,7 @@
   height: 100%;
   border : 0;
 }
+
+html:has(.menu[popover]:popover-open) {
+  overflow: hidden;
+}
